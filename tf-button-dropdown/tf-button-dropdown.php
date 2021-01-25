@@ -22,12 +22,20 @@ FLBuilder::register_module( 'TFButtonDropdown', array(
 	'tf-button-dropdown-tab'      => array(
 		'title'         => __( 'Tab', 'tf-bb-button-dropdown' ),
 		'sections'      => array(
-      'tf-button-dropdown-section'  => array(
-        'title'            => __( 'Section', 'tf-bb-button-dropdown' ),
+      'tf-button-dropdown-button-1'  => array(
+        'title'            => __( 'Button 1', 'tf-bb-button-dropdown' ),
 				'fields'        => array(
-          'tf_button_dropdown_field_1'     => array(
+          'tf_button_dropdown_button_1_repeater_field'     => array(
             'type'          => 'text',
-            'label'         => __( 'Text Field 1', 'fl-builder' ),
+            'label'         => __( 'Repeater field', 'fl-builder' ),
+          ),
+					'tf_button_dropdown_button_1_label_field'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Label field', 'fl-builder' ),
+          ),
+					'tf_button_dropdown_button_1_link_field'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Link field', 'fl-builder' ),
           )
         )
       )
