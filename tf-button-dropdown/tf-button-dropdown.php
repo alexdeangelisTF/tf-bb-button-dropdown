@@ -5,7 +5,7 @@ class TFButtonDropdown extends FLBuilderModule {
 		parent::__construct(array(
 			'name'            => __( 'Button Dropdown', 'tf-bb-button-dropdown' ),
 			'description'     => __( 'A totally awesome module from Thinking Fox!', 'tf-bb-button-dropdown' ),
-			'group'           => __( 'Thinking Fox', 'tf-bb-button-dropdown' ),
+			'group'           => __( 'Thinking Fox Modules', 'tf-bb-button-dropdown' ),
 			'category'        => __( 'Thinking Fox', 'tf-bb-button-dropdown' ),
 			'dir'             => TF_BB_CLICKABLE_DROPDOWN_DIR . 'tf-button-dropdown/',
 			'url'             => TF_BB_CLICKABLE_DROPDOWN_URL . 'tf-button-dropdown/',
