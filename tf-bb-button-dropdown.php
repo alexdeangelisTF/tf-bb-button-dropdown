@@ -13,7 +13,7 @@ define( 'TF_BB_CLICKABLE_DROPDOWN_URL', plugins_url( '/', __FILE__ ) );
 function tf_bb_clickable_dropdown_module() {
 	if ( class_exists( 'FLBuilder' ) ) {
 		// Include your custom modules here.
-		//require_once 'tf-button-dropdown/tf-button-dropdown.php';
+		require_once 'tf-button-dropdown/tf-button-dropdown.php';
 	}
 }
 add_action( 'init', 'tf_bb_clickable_dropdown_module' );
