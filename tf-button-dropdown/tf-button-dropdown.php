@@ -16,3 +16,19 @@ class TFButtonDropdown extends FLBuilderModule {
 		));
 	}
 }
+
+
+FLBuilder::register_module( 'TFButtonDropdown', array(
+	'tf-button-dropdown-tab'      => array(
+		'title'         => __( 'Tab', 'tf-bb-button-dropdown' ),
+		'sections'      => array(
+      'tf-button-dropdown-section'  => array(
+        'title'            => __( 'Section', 'tf-bb-button-dropdown' ),
+				'tf-button-dropdown-field-1'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Text Field', 'tf-bb-button-dropdown' ),
+          ),
+      )
+    )
+	)
+) );
