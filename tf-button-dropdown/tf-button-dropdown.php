@@ -24,10 +24,12 @@ FLBuilder::register_module( 'TFButtonDropdown', array(
 		'sections'      => array(
       'tf-button-dropdown-section'  => array(
         'title'            => __( 'Section', 'tf-bb-button-dropdown' ),
-				'tf_button_dropdown_field_1'     => array(
-        	'type'          => 'text',
-        	'label'         => __( 'Text Field', 'tf-bb-button-dropdown' ),
-      	),
+				'fields'        => array(
+          'tf_button_dropdown_field_1'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Text Field 1', 'fl-builder' ),
+          )
+        )
       )
     )
 	)
