@@ -25,6 +25,10 @@ FLBuilder::register_module( 'TFButtonDropdown', array(
       'tf-button-dropdown-button-1'  => array(
         'title'            => __( 'Button 1 Settings', 'tf-bb-button-dropdown' ),
 				'fields'        => array(
+					'tf_button_dropdown_button_1_text'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Button 1 Text', 'fl-builder' ),
+          ),
           'tf_button_dropdown_button_1_repeater_field'     => array(
             'type'          => 'text',
             'label'         => __( 'Repeater field', 'fl-builder' ),
