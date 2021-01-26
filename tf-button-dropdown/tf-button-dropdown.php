@@ -68,9 +68,21 @@ FLBuilder::register_module( 'TFButtonDropdown', array(
       'tf-button-dropdown-button-2'  => array(
         'title'            => __( 'Button 2 Settings', 'tf-bb-button-dropdown' ),
 				'fields'        => array(
+					'tf_button_dropdown_button_2_text'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Button 2 Text', 'fl-builder' ),
+          ),
           'tf_button_dropdown_button_2_repeater_field'     => array(
             'type'          => 'text',
-            'label'         => __( 'Repeater 2 field', 'fl-builder' ),
+            'label'         => __( 'Button 2 Repeater field', 'fl-builder' ),
+          ),
+					'tf_button_dropdown_button_2_label_field'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Button 2 Label field', 'fl-builder' ),
+          ),
+					'tf_button_dropdown_button_2_link_field'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Button 2 URL field', 'fl-builder' ),
           )
         )
       )
