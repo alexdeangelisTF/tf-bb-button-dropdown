@@ -22,11 +22,12 @@ if ($button_1_repeater_field) {
 		$button_1_link_value = $settings->tf_button_dropdown_button_1_link_field;
 		
 		echo '<div class="tf-dropdown tf-dropdown-' . $id . '">';
+		echo '<div class="button-wrap" id="button-1">';
 		echo '<button type="button" class="tf-button" data-toggle="dropdown">';
 		// This text should change to a module field value
 		echo $button_1_text;
 		echo '</button>';
-		echo '<div class="tf-dropdown-menu">';
+		echo '<div class="tf-dropdown-menu tf-dropdown-menu-1">';
 		foreach($button_1_repeater_field as $repeater_1) {
 			
 			if ($button_1_link_type == 'link_type_url_field') {
@@ -35,11 +36,54 @@ if ($button_1_repeater_field) {
 				$link = '#';
 			} else {}
 			
-			echo '<a class="tf-dropdown-item" id="postname-1" href="' . $link . '">';
+			$button_1_id = urlencode($repeater_1[$button_1_label_value]);
+			
+			echo '<a class="tf-dropdown-item" id="' . $button_1_id . '" href="' . $link . '">';
 			echo $repeater_1[$button_1_label_value];
 			echo '</a>';
 		}
 		echo '</div>';
+		echo '</div>';
+		
+		if ($button_1_link_type == 'link_type_repeater_field') {
+			
+			$button_2_repeater_value = $settings->tf_button_dropdown_button_2_repeater_field;
+			$button_2_text = $settings->tf_button_dropdown_button_2_text;
+			if ($button_2_repeater_value) {
+				
+				$button_2_label_field = $settings->tf_button_dropdown_button_2_label_field;
+				$button_2_link_field = $settings->tf_button_dropdown_button_2_link_field;
+				
+				echo '<div class="button-wrap" id="button-2">';
+				echo '<button type="button" class="tf-button" data-toggle="dropdown" id="button-2">';
+				// This text should change to a module field value
+				echo $button_2_text;
+				echo '</button>';
+				echo '<div class="tf-dropdown-menu tf-dropdown-menu-2">';
+				foreach($button_1_repeater_field as $repeater_1) {
+					
+					$button_1_id = urlencode($repeater_1[$button_1_label_value]);
+					
+					$button_2_repeater = $repeater_1[$button_2_repeater_value];
+					
+					foreach($button_2_repeater as $button_2_values) {
+						
+						$button_2_label = $button_2_values[$button_2_label_field];
+						$button_2_link = $button_2_values[$button_2_link_field];
+						
+						echo '<a class="tf-dropdown-item" data-button="' . $button_1_id . '" href="' . $button_2_link . '">';
+						echo $button_2_label;
+						echo '</a>';
+						
+					}
+					
+				}
+				echo '</div>';
+				echo '</div>';
+			}
+			
+		}
+		
 		echo '</div>';
 		
 	}
