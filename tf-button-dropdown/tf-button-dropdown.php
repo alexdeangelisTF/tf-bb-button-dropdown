@@ -19,11 +19,11 @@ class TFButtonDropdown extends FLBuilderModule {
 
 
 FLBuilder::register_module( 'TFButtonDropdown', array(
-	'tf-button-dropdown-tab'      => array(
-		'title'         => __( 'Tab', 'tf-bb-button-dropdown' ),
+	'tf_button_dropdown_button_1_tab'      => array(
+		'title'         => __( 'Button 1', 'tf-bb-button-dropdown' ),
 		'sections'      => array(
       'tf-button-dropdown-button-1'  => array(
-        'title'            => __( 'Button 1', 'tf-bb-button-dropdown' ),
+        'title'            => __( 'Button 1 Settings', 'tf-bb-button-dropdown' ),
 				'fields'        => array(
           'tf_button_dropdown_button_1_repeater_field'     => array(
             'type'          => 'text',
@@ -33,9 +33,40 @@ FLBuilder::register_module( 'TFButtonDropdown', array(
             'type'          => 'text',
             'label'         => __( 'Label field', 'fl-builder' ),
           ),
+					'tf_button_dropdown_button_1_link_type' => array(
+						'type'          => 'select',
+						'label'         => __( 'Button 1 Link Type', 'fl-builder' ),
+						'default'       => 'link_type_url_field',
+						'options'       => array(
+							'link_type_url_field'      => __( 'URL Field', 'fl-builder' ),
+							'link_type_repeater_field'      => __( 'Repeater Field', 'fl-builder' )
+						),
+						'toggle'        => array(
+							'link_type_url_field'      => array(
+								'fields'        => array( 'tf_button_dropdown_button_1_link_field' ),
+							),
+							'link_type_repeater_field'      => array(
+								'tabs'          => array( 'tf_button_dropdown_button_2_tab' )
+							)
+						)
+					),
 					'tf_button_dropdown_button_1_link_field'     => array(
             'type'          => 'text',
-            'label'         => __( 'Link field', 'fl-builder' ),
+            'label'         => __( 'URL field', 'fl-builder' ),
+          )
+        )
+      )
+    )
+	),
+	'tf_button_dropdown_button_2_tab'      => array(
+		'title'         => __( 'Button 2', 'tf-bb-button-dropdown' ),
+		'sections'      => array(
+      'tf-button-dropdown-button-2'  => array(
+        'title'            => __( 'Button 2 Settings', 'tf-bb-button-dropdown' ),
+				'fields'        => array(
+          'tf_button_dropdown_button_2_repeater_field'     => array(
+            'type'          => 'text',
+            'label'         => __( 'Repeater 2 field', 'fl-builder' ),
           )
         )
       )
