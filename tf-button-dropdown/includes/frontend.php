@@ -23,7 +23,7 @@ if ($button_1_repeater_field) {
 		
 		echo '<div class="tf-dropdown tf-dropdown-' . $id . '">';
 		echo '<div class="button-wrap" id="button-wrap-1">';
-		echo '<button type="button" class="tf-button" data-toggle="dropdown">';
+		echo '<button type="button" class="tf-button">';
 		// This text should change to a module field value
 		echo $button_1_text;
 		echo '</button>';
@@ -56,7 +56,7 @@ if ($button_1_repeater_field) {
 				$button_2_link_field = $settings->tf_button_dropdown_button_2_link_field;
 				
 				echo '<div class="button-wrap hide" id="button-wrap-2">';
-				echo '<button type="button" class="tf-button" data-toggle="dropdown" id="button-2">';
+				echo '<button type="button" class="tf-button" id="button-2">';
 				// This text should change to a module field value
 				echo $button_2_text;
 				echo '</button>';
