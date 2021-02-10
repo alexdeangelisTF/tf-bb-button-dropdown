@@ -28,6 +28,11 @@
 	
 	// On click of a dropdown item
 	$(module).find('.button-wrap .tf-dropdown-menu a').on('click',function(e){
+		
+		var href = $(this).attr('href');
+		if (href == '#') {
+				e.preventDefault();
+		}
 		var dropdown = $(this).parent();
 		var buttonWrap = $(dropdown).parent();
 		// Check if the dropdown has the show class
