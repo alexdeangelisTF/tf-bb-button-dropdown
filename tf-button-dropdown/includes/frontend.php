@@ -72,7 +72,7 @@ if ($button_1_repeater_field) {
 						$button_2_label = $button_2_values[$button_2_label_field];
 						$button_2_link = $button_2_values[$button_2_link_field];
 						
-						echo '<a class="tf-dropdown-item hide" data-button="' . $button_1_id . '" href="' . $button_2_link . '">';
+						echo '<a class="tf-dropdown-item hide" data-button="' . $button_1_id . '" href="' . $button_2_link . '" target="_blank">';
 						echo $button_2_label;
 						echo '</a>';
 						
