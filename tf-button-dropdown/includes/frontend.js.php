@@ -44,7 +44,7 @@
 		
 		// Get the text value of the item clicked & replace the button text with that
 		var linkText = $(this).text();
-		$(buttonWrap).find('.tf-button').text(linkText);
+		$(buttonWrap).find('.tf-button').html(linkText + '<i class="fas fa-chevron-down"></i>');
 		
 		// If the button is button 1, on click of item, show button 2
 		var buttonWrapID = $(buttonWrap).attr('id');

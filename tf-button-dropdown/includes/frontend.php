@@ -26,6 +26,7 @@ if ($button_1_repeater_field) {
 		echo '<button type="button" class="tf-button">';
 		// This text should change to a module field value
 		echo $button_1_text;
+		echo '<i class="fas fa-chevron-down"></i>';
 		echo '</button>';
 		echo '<div class="tf-dropdown-menu tf-dropdown-menu-1 hide">';
 		foreach($button_1_repeater_field as $repeater_1) {
@@ -59,6 +60,7 @@ if ($button_1_repeater_field) {
 				echo '<button type="button" class="tf-button" id="button-2">';
 				// This text should change to a module field value
 				echo $button_2_text;
+				echo '<i class="fas fa-chevron-down"></i>';
 				echo '</button>';
 				echo '<div class="tf-dropdown-menu tf-dropdown-menu-2 hide">';
 				foreach($button_1_repeater_field as $repeater_1) {
