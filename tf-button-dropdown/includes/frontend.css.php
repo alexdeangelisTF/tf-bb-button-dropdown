@@ -6,7 +6,7 @@
 
 .tf-dropdown-<?php echo $id; ?> .hide,
 .tf-dropdown-<?php echo $id; ?> .button-wrap.hide {
-	display:none;
+	display:none !important;
 }
 .tf-dropdown-<?php echo $id; ?> .button-wrap {
 	display:inline-block;
